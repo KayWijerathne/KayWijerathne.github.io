@@ -8,50 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Romantic Color Palette */
+    --background: 48 100% 97%; /* Cream (#FFF8E7) */
+    --foreground: 340 50% 20%; /* Deep pink for text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 48 100% 97%;
+    --card-foreground: 340 50% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 48 100% 97%;
+    --popover-foreground: 340 50% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 336 100% 94%; /* Light pink (#FFE0EC) */
+    --primary-foreground: 340 50% 20%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 120 30% 85%; /* Sage green (#C8E6C9) */
+    --secondary-foreground: 340 50% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 48 100% 95%;
+    --muted-foreground: 340 30% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 336 100% 94%;
+    --accent-foreground: 340 50% 20%;
+
+    --love-pink: 336 100% 94%; /* Light pink */
+    --sage-green: 120 30% 85%; /* Sage green */
+    --cream: 48 100% 97%; /* Cream */
+    --heart-red: 350 90% 65%; /* Heart color */
+    --soft-shadow: 340 20% 80%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 340 30% 90%;
+    --input: 340 30% 95%;
+    --ring: 340 60% 70%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-romantic: linear-gradient(135deg, hsl(var(--love-pink)), hsl(var(--sage-green)));
+    --gradient-soft: linear-gradient(180deg, hsl(var(--cream)), hsl(var(--love-pink)));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -8px hsl(var(--soft-shadow));
+    --shadow-heart: 0 0 30px hsl(var(--heart-red) / 0.3);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -100,6 +108,30 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+  }
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .text-outline {
+    text-shadow: 1px 1px 0 hsl(var(--love-pink)), 
+                -1px -1px 0 hsl(var(--love-pink)), 
+                1px -1px 0 hsl(var(--love-pink)), 
+                -1px 1px 0 hsl(var(--love-pink));
   }
 }

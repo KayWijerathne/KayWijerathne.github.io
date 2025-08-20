@@ -1,12 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeartCounter from '../components/HeartCounter';
+import FortuneCookie from '../components/FortuneCookie';
+import MoodGarden from '../components/MoodGarden';
+import LoveSafe from '../components/LoveSafe';
+import InfiniteReasons from '../components/InfiniteReasons';
+import Footer from '../components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-gradient-soft pb-24">
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 py-8">
+        <HeartCounter />
       </div>
+
+      {/* Interactive Sections */}
+      <div className="container mx-auto px-4 space-y-12">
+        {/* Fortune Cookie */}
+        <FortuneCookie />
+
+        {/* Mood Garden */}
+        <MoodGarden />
+
+        {/* Love Safe */}
+        <LoveSafe />
+
+        {/* Infinite Reasons */}
+        <InfiniteReasons />
+      </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

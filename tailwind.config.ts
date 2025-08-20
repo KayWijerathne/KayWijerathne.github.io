@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'romantic': ['Dancing Script', 'cursive'],
+				'body': ['Quicksand', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +65,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'love-pink': 'hsl(var(--love-pink))',
+				'sage-green': 'hsl(var(--sage-green))',
+				'cream': 'hsl(var(--cream))',
+				'heart-red': 'hsl(var(--heart-red))'
+			},
+			backgroundImage: {
+				'gradient-romantic': 'var(--gradient-romantic)',
+				'gradient-soft': 'var(--gradient-soft)',
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'heart': 'var(--shadow-heart)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
